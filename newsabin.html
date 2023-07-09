@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="newsabin.css">
+    <script src="newsabin.js"></script>
+    <style>input{
+        margin: 40px;
+        width:100px;
+        height: 100px;
+        border:none;
+        font-size: 50px;
+    }
+    #reset{
+        background-color: red;
+    }
+    #Increase{
+    
+        background-color: green;
+    }
+    #decrease{
+        background-color: yellow;
+    }
+    button{
+        width: 100px;
+        height: 100px;
+    }</style>
+    <script>
+
+
+
+        function reset(){
+            document.getElementById("output").value=0;
+        }
+        
+        function increase(){
+            let result=parseInt(document.getElementById("output").value);
+        document.getElementById("output").value=(1+result);
+        }
+        function decrease(){
+            let result=document.getElementById("output").value;
+            document.getElementById("output").value=result-1;;
+        }</script>
+    
+</head>
+
+<body>
+    <center>
+        <div>
+            <input type="text" id="output" value=0 readonly><br>
+            <button type="button" id="decrease"  onclick="decrease()">Decrease</button>
+        <button type="text" id="reset" onclick="reset()">Reset</button>
+        <button type="text" id="Increase" onclick="increase()">Increase</button>
+        
+        
+        </div>
+    </center>
+    
+</body>
+</html>
